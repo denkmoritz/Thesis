@@ -1,0 +1,44 @@
+# data, outputs, local config
+data/*
+!data/README.md
+outputs/
+config/paths.yaml
+
+# large files
+*.h5
+*.mp4
+*.pt
+*.npy
+*.npz
+*.zip
+*.jpg
+*.png
+!thesis/figures/**
+!thesis/logos/**
+
+# thesis
+thesis/out/
+thesis/papers/
+thesis/drafts/
+*.pdf
+!thesis/figures/**/*.pdf
+!thesis/logos/**/*.pdf
+
+# PALMA
+logs/
+*.err
+
+# Python
+__pycache__/
+venv/
+venv_*/
+.pytest_cache/
+
+# editor / OS
+.vscode/
+.DS_Store
+
+# Claude
+CLAUDE.md
+**/CLAUDE.md
+.claude/
