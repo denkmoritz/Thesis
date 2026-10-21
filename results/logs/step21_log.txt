@@ -1,0 +1,10 @@
+scene    labels in human zone in detector zone outside |             recall               size          placement no DVS counterpart
+1_l-l-l     358           95%              90%      37 |         18 ( 49 %)          1 (  3 %)          1 (  3 %)         17 ( 46 %)
+2_l-h-l     277           97%              92%      22 |         13 ( 59 %)          1 (  5 %)          1 (  5 %)          7 ( 32 %)
+3_m-h-h     416           98%              75%     103 |         89 ( 86 %)          2 (  2 %)          5 (  5 %)          7 (  7 %)
+4_m-m-h     233           99%              69%      72 |         69 ( 96 %)          0 (  0 %)          0 (  0 %)          3 (  4 %)
+5_h-l-h      65           97%              69%      20 |          3 ( 15 %)          0 (  0 %)         15 ( 75 %)          2 ( 10 %)
+6_h-h-h      91           97%              84%      15 |         13 ( 87 %)          0 (  0 %)          0 (  0 %)          2 ( 13 %)
+all                                                269 |        205 ( 76 %)          4 (  1 %)         22 (  8 %)         38 ( 14 %)
+
+outside = labels outside the detector zone. recall = the detector had no box on that insect; size = it had one, but the zone was too narrow because the detector box was smaller than the human box; placement = it had one, but the zone lies off the label (box centre or correction).

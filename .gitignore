@@ -25,7 +25,7 @@ thesis/drafts/
 !thesis/logos/**/*.pdf
 
 # PALMA
-logs/
+/logs/
 *.err
 
 # Python

@@ -1,0 +1,40 @@
+centre error used (other five scenes): 1_l-l-l 0.058, 2_l-h-l 0.059, 3_m-h-h 0.058, 4_m-m-h 0.057, 5_h-l-h 0.056, 6_h-h-h 0.055
+
+1. 108 combinations x 6 scenes
+   12 done
+   24 done
+   36 done
+   48 done
+   60 done
+   72 done
+   84 done
+   96 done
+   108 done
+
+chosen on the other five scenes (mean F1 there):
+   1_l-l-l: {'CONTINUE': 0.5, 'MIN_HITS': 5, 'MAX_GAP': 0.4, 'DRIFT': 5.0}  (63.2)
+   2_l-h-l: {'CONTINUE': 0.5, 'MIN_HITS': 5, 'MAX_GAP': 0.2, 'DRIFT': 10.0}  (63.0)
+   3_m-h-h: {'CONTINUE': 0.5, 'MIN_HITS': 5, 'MAX_GAP': 0.2, 'DRIFT': 10.0}  (65.8)
+   4_m-m-h: {'CONTINUE': 0.5, 'MIN_HITS': 5, 'MAX_GAP': 0.2, 'DRIFT': 10.0}  (68.6)
+   5_h-l-h: {'CONTINUE': 0.25, 'MIN_HITS': 5, 'MAX_GAP': 0.4, 'DRIFT': 20.0}  (66.0)
+   6_h-h-h: {'CONTINUE': 0.5, 'MIN_HITS': 5, 'MAX_GAP': 0.2, 'DRIFT': 10.0}  (71.3)
+
+2a/2b. DVS F1 / found / right in % at the best cut-off; all certain annotations, and hand-placed frames only
+scene    |     all: detector |      all: tracker | keyframes: detector | keyframes: tracker | frames
+1_l-l-l  |  69.7   68%   71% |  78.0   77%   79% |  82.3   81%   83% |  84.0   79%   90% | 1373
+2_l-h-l  |  54.7   46%   67% |  81.6   82%   82% |  85.7   82%   90% |  85.8   84%   88% | 998
+3_m-h-h  |  53.0   44%   68% |  67.3   56%   83% |  65.5   61%   70% |  78.8   69%   90% | 678
+4_m-m-h  |  35.7   28%   49% |  53.7   39%   85% |  63.0   59%   68% |  77.6   69%   89% | 974
+5_h-l-h  |  54.6   72%   44% |  55.2   74%   43% |  83.9   80%   88% |  84.0   83%   86% | 381
+6_h-h-h  |  29.6   26%   35% |  40.2   33%   52% |  49.5   52%   47% |  59.9   61%   59% | 656
+
+2c. RGB labels inside a zone (weight > 0.5) / mean zone area, labelled RGB frames, zones from f-1 and f
+scene    | detector: in zone, area, zones | tracker: in zone, area, zones
+1_l-l-l  |        90%   1.42%    882 |        93%   1.50%   1070
+2_l-h-l  |        92%   1.40%    623 |        94%   1.84%   1150
+3_m-h-h  |        75%   0.64%    974 |        80%   0.73%   1362
+4_m-m-h  |        69%   1.04%    385 |        76%   2.11%    867
+5_h-l-h  |        69%   0.57%    139 |        69%   0.69%    172
+6_h-h-h  |        84%   1.69%    385 |        82%   2.54%    632
+
+found = of 100 certain DVS annotations, how many got a box; right = of 100 boxes, how many are on an annotation; F1 = one number for both. The cut-off is chosen on the scored scene itself (as in step 12b and the paper), so all three are optimistic, for detector and tracker alike.
