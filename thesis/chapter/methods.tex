@@ -180,7 +180,7 @@ rarely show more than one insect visible in RGB at a time.
 \section{Stereo Calibration of the Event Camera and RGB Camera Rig}
 \label{sec:stereo-calibration}
 
-The camera rig and recordings analyzed in this thesis originate from the
+\textbf{Rewrite this passage} The camera rig and recordings analyzed in this thesis originate from the
 RGB--DVS stereo camera trap system introduced by
 \textcite{gebauer_towards_2024}, who combined an event-based camera
 (\textit{DVS}) with a conventional frame-based \textit{RGB} camera observing the same
@@ -192,31 +192,28 @@ stereo calibration. This section describes that calibration procedure and
 motivates every design choice that is not immediate from the standard
 calibration literature.
 
-Following their setup, the rig pairs a
-Prophesee EVK3 HD event camera (DVS), fitted with a Kowa LM5NCL 4.5\,mm
-lens, with a Basler acA1920-150uc RGB camera, fitted with a Kowa LM6JC
-6\,mm lens. Per the manufacturers' datasheets, the two sensors have a pixel
-pitch of $4.86\,\mu\text{m}$ (DVS) \parencite{prophesee_evk3hd_2024} and
-$4.8\,\mu\text{m}$ (RGB) \parencite{basler_aca1920_2026}, at native
-resolutions of $1280\times720$ (DVS) and $1920\times1200$ (RGB).
-Consequently, the two sensors also differ in aspect ratio. The physical
-baseline between the two camera housings was measured directly as
-$60\,\text{mm}$ \parencite{gebauer_towards_2024}; this value is used in Section~\ref{sec:scale-recovery} to
+Following their setup, the rig pairs a Prophesee EVK3 HD event camera (DVS), fitted with a 
+Kowa LM5NCL 4.5\,mm lens, with a Basler acA1920-150uc RGB camera, fitted with a Kowa LM6JC
+6\,mm lens. Per the manufacturers' datasheets, the two sensors have a pixel pitch
+of $4.86\,\mu\text{m}$ (DVS) \parencite{prophesee_evk3hd_2024} and $4.8\,\mu\text{m}$ (RGB) 
+\parencite{basler_aca1920_2026}, at native resolutions of $1280\times720$ (DVS) and 
+$1920\times1200$ (RGB). Consequently, the two sensors also differ in aspect ratio. The 
+physical baseline between the two camera housings was measured directly as $60\,\text{mm}$ 
+\parencite{gebauer_towards_2024}; this value is used in Section~\ref{sec:scale-recovery} to
 resolve the scale ambiguity inherent to the calibration.
 
-At a high level, calibration proceeds as follows: (1) detect a planar
-calibration target in both video streams, (2) pair up detections that occur
-at corresponding frames, (3) calibrate each camera individually, (4)
-calibrate the pair jointly while keeping the individual intrinsics fixed,
-(5) discard the frame pairs with the worst geometric consistency and refit,
-and (6) rectify both views onto a common image plane. Each step is discussed
-below.
+At a high level, calibration proceeds as follows: (1) detect a planar 
+calibration target in both video streams, (2) pair up detections that occur at 
+corresponding frames, (3) calibrate each camera individually, (4) calibrate the pair 
+jointly while keeping the individual intrinsics fixed, (5) discard the frame pairs with the 
+worst geometric consistency and refit, and (6) rectify both views onto a common image 
+plane. Each step is discussed below.
 
 \subsection{Calibration Target and Detection}
 
-A planar \textit{asymmetric circle grid} (4 columns $\times$ 11 rows,
-staggered; see Figure~\ref{fig:stereo-calib-board}) was used as the calibration target, detected via blob-based grid
-detection rather than the more common checkerboard corner detection.
+A planar \textit{asymmetric circle grid} (4 columns $\times$ 11 rows, staggered; see 
+Figure~\ref{fig:stereo-calib-board}) was used as the calibration target, detected via 
+blob-based grid detection rather than the more common checkerboard corner detection.
 
 \begin{figure}[ht]
     \centering
@@ -363,8 +360,222 @@ sub-millimeter dot spacing on the physical target directly, at the cost of
 the recovered scale depending on how accurately the $60\,\text{mm}$ baseline
 itself was measured.
 
-\section{Constructing a Probability Zone Around the Epipolar Line}
+\section{DVS Detector}
+\label{sec:dvs-detector}
+
+Every zone of the realistic system (\textbf{describe what is meant with system}) starts from a DVS detection.
+The insects are first detected in the DVS frames alone. THe DVS frames of the published videos (Section~\ref{
+sec:data-recordings}) are used as they are, stored as PNG.
+
+\subsection{Training Frames}
+
+The training frames are chosem from the DVS annotation (Section~\ref{sec:data-dvs-annotation}) as follows:
+\begin{itemize}
+    \item every frame with a least one certain, hand-placed is used;
+    \item such a frame gets all its certain boxes as labels. also the filled-in ones, so that no visible insect 
+    is taught as background;
+    \item frames without insects are added, 20\,\% as many as frames with insects. They are taken only where no 
+    annotation exists within 50 frames before and after, so that the detector also learns to stay silent.
+\end{itemize}
+
+\begin{table}[ht]
+    \centering
+    \caption{Training frames of the DVS detector per scene.}
+    \label{tab:dvs-training-data}
+    \small
+    \begin{tabular}{lccccccc}
+        \hline
+         & Scene 1 & Scene 2 & Scene 3 & Scene 4 & Scene 5 & Scene 6 & Total \\
+        \hline
+        Frames with insects & 1,551 & 552 & 2,130 & 1,163 & 357 & 1,235 & 6,988 \\
+        Frames without insects & 310 & 110 & 426 & 233 & 71 & 247 & 1,397 \\
+        Boxes & 1,905 & 552 & 5,413 & 1,690 & 365 & 2,133 & 12,058 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+As for the RGB detector (Section~\ref{sec:training-design}), one scene is left out at a time. The detector is
+trained on the other five scenes and then runs on every frame of the video of the left-out scene. Every scene 
+therefore gets its detections from a model that has never seen it.
+
+\subsection{Detectors and Settings}
+
+Three detectors are compared: YOLOv7 \parentcite{wang_yolov7}, which \textcite{gebauer_towards_2024} used as
+their deep-learning baseline and the large version of YOLOv8 \parentcite{jocher_yolov8_2023} and YOLOv11 
+\parencite{jocher_yolo11_2024}. All three use the same settings (Table~\ref{tab:dvs-settings}). Each of the six 
+folds is trained with three seeds.
+
+\begin{table}[ht]
+    \centering
+    \caption{Training settings of the DVS detectors.}
+    \label{tab:dvs-settings}
+    \small
+    \begin{tabular}{ll}
+        \hline
+        Start weights & COCO \\
+        Input & DVS frame, $1280 \times 720$, at 1280 pixels (native width) \\
+        Epochs, batch size & 50, 8 \\
+        Hyperparameters & default of the framework (YOLOv7: \texttt{hyp.scratch.p5}) \\
+        Weights used & last epoch \\
+        Repetitions & 3 seeds per fold \\
+        Confidence threshold on the video & 0.01 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Four of the eighteen YOLO11l runs broke under mixed-precision training: single batches produced invalid value 
+that ended up in the batch normalization statistics. Three of these networks found no insect at all, the fourt 
+far to many. These four runs were repeated in full precision.
+
+The detections on the video are kept down to a confidence of 0.01. Which of them make a zone is decided later by
+the cut-off of Section~\ref{sec:zone-sources}.
+
+\section{From a DVS Detection to a Zone in the RGB Image}
 \label{sec:probability-zones}
+
+After rectification, the two images share their rows: a point in the DVS image and the same point in the RGB 
+image lie on the same image row (Section~\ref{sec:stereo-rectification}). A DVS detection tells where to look in
+the RGB image only up to one unknown, the depth of the insect. THe depth decides how far along the row the insect
+appears. Across the row, the position is fixed, with the excpection of the erros of the calibration.
+
+This sections turns one DVS detection into a \emph{zone}: a weight between 0 and 1 for every pixel of the RGB
+frame. The weight is 1 where the insect can be and falls off smoothly outside. Four questions have to be 
+answered for that: which DVS frames belong to an RGB frame, how the rows of the two cameras are matched in each 
+scene, how wide the zone is across the line, and how long it is along the line. No RGB label of the test scene 
+is used anywhere in this section. The few values that are fitted on RGB labels are fitted on the other five 
+scenes \textbf{explain in more detail, otherwise unclear, also maybe add definition of across and along the line with coordianate system}.
+
+\subsection{Which DVS Frames Belong to an RGB Frame}
+\label{sec:zone-timing}
+
+The exposure of RGB frame $f$ lies at the border between DVS frames $f-1$ and $f$ 
+(Section~\ref{sec:data-timing}), so an insect seen in RGB frame $f$ can show up in either of them. 
+
+For this reason, the zones from the DVS detector use the detections of both DVS frames, $f-1$ and $f$. The zones
+from the human DVS annotation use frame $f-1$ only, the frame whose annotation matched the RGB position best.
+
+\subsection{Matching the Rows in Each Scene}
+\label{sec:zone-row-correction}
+
+\textcite{gebauer_towards_2024} only ensured that the two cameras see the same area, \enquote{without explicit 
+extrinsic camera parameter calculation}. The calibration of Section~\ref{sec:stereo-calibration} fits the rig 
+well where the board was, but in the recorded scenes the RGB insect does not sit exactly on the row of its DVS
+detection. Without a correction, the offset differs from scene to scene (Table~\ref{tab:row-correction}) and 
+with the position in the image. The pose of the camera was apparently not the same in every scene.
+
+A small rotation of one camera explains this pattern. A tilt shifts all rows the same amount. A roll adds a shift
+that grows from left to right, and small terms depend on the row itself \parencite{hartley_multiple_2003}. The 
+row offset between a DVS detection and its RGB insect is modelled per scene as a linear function of the rectified
+position $(u, v)$:
+\begin{equation}
+    \Delta v(u, v) = a + b\,u + c\,v .
+    \label{eq:row-correction}
+\end{equation}
+A rotation sideways (yaw) moves points along the row instead. It looks like a change of depth and cannot be 
+separated from it, so it is not part the model.
+
+The three parameters are fitted without RGB labels. From the video of the scene, 150 frames with exatly one DVS 
+detection are taken, spread evenly over the recording. In each of these frames, the RGB motion picture (the 
+difference between the frame and the median of its neighboring frames, desrcibe in detail later) is searched in 
+a wide band of $\pm 40$ RGB pixels around the uncorrected line, and its strongest peak is taken moves in the 
+wind. Wrong matches scatter, while right matches agree on common offset. The most frequent offset is found first,
+and only matches within 12 RGB pixels of it are kept. Equation~\ref{eq:row-correction} is then fitted to these 
+matches by least squares, with a second pass that drops outliers.
+
+\begin{table}[ht]
+    \centering
+    \caption{Row correction per scene. Matches: label-free matches (of 150 frames)
+    that agree with the most frequent offset; negative: share of these matches with
+    a negative disparity (sign check, Section~\ref{sec:zone-along-line}). The other
+    columns give the median remaining row offset of the RGB labels in RGB pixels,
+    measured on the last 40\,\% of the labelled frames of each scene.}
+    \label{tab:row-correction}
+    \small
+    \begin{tabular}{lccccc}
+        \hline
+        Scene & Matches & Negative & No correction & Fit on 60\,\% of labels & Label-free \\
+        \hline
+        1 & 57 & 0\,\% & 6.4 & 5.0 & 5.6 \\
+        2 & 96 & 0\,\% & 4.9 & 3.5 & 5.0 \\
+        3 & 25 & 64\,\% & 14.4 & 4.1 & 4.2 \\
+        4 & 32 & 0\,\% & 9.2 & 3.4 & 3.1 \\
+        5 & 29 & 0\,\% & 2.6 & 1.8 & 1.0 \\
+        6 & 23 & 0\,\% & 12.7 & 2.2 & 3.3 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Table~\ref{tab:row-correction} compares the label-free correction with a fit on the first 60\,\% of the RGB 
+labels of the same scene, which would not be possible for a new scene. The label-free correction is about as 
+good. It removes most of the offset in scenes 3, 4 and 6, where the offset was largest. Fitting on the first few 
+labelled frames instead was unstable: these frames often lie in one corner of the image, and the fitted line was
+up to 141 pixels off elsewhere.
+
+When the zones come from the DVS detector, the matches built from its detections instead of the human annotation
+(frames with exactly one detection above the cut-off, Section~\ref{sec:zone-sources}). The chain then uses no 
+human label of the test scene at all.
+
+\subsection{Zone Across the Line}
+\label{sec:zone-across-line}
+
+Across the corrected line, the zone has two parts. The first is a flat band of weight 1. It is as tall as the DVS
+box, converted to RGB pixels with the ratio of the two focal lengths, 1.37 \parencite{hartley_multiple_2003}. 
+The band must cover the whole insect, not only its center. DVS boxes are drawn larger than the insect: an RGB 
+label is on average only about 0.7 times as a toll as its DVS box after the conversion. So the band is about 
+40\,\% taller than the insect, which leaves room for small errors.
+
+The second part is a Gaussian fall-off outside the band. Its width $\sigma$ describes how far the insect can 
+still lie from the corrected line. This error is not the same over the image: it depends on where the points
+used for the calibration lay \parencite{zhang_determining_1998}. The calibration board covered only about half
+of the RGB image and left out its edges. As a result, lens distortion is extrapolated there, and the error grows
+towards the top and bottom. $\sigma$ is for this reason estimated per band of image rows, 150 rectified pixels
+high. In each band it is the 68th percentile of the absolute raw offsets of the RGB labels that remain after the 
+correction above. A band needs at least 15 labels, and $\sigma$ is never smaller than 4 pixels. The labels come 
+from the other five scenes only, so every scene gets its own value (Table~\ref{tab:zone-sigma}). Between the 
+bands, $\sigma$ is interpolated linearly; above the top and below the bottom band, it keeps the value of the last
+band.
+
+\begin{table}[ht]
+    \centering
+    \caption{Width $\sigma$ of the fall-off (RGB pixels) per band of image rows,
+    for each left-out scene, estimated on the other five scenes. Rows are given as
+    the centre of the band in rectified pixels; small values = top of the image.
+    --: fewer than 15 labels in the band.}
+    \label{tab:zone-sigma}
+    \small
+    \begin{tabular}{lcccccc}
+        \hline
+        Left-out scene & 225 & 375 & 525 & 675 & 825 & 975 \\
+        \hline
+        1 & -- & 6.8 & 4.5 & 5.8 & 5.3 & 7.4 \\
+        2 & 15.1 & 6.8 & 4.6 & 7.0 & 7.7 & 5.3 \\
+        3 & 15.2 & 5.8 & 4.6 & 4.8 & 6.7 & 9.7 \\
+        4 & 15.4 & 6.8 & 4.8 & 6.6 & 8.3 & 9.7 \\
+        5 & 15.1 & 6.8 & 4.9 & 5.7 & 7.0 & 13.5 \\
+        6 & 15.2 & 6.9 & 4.7 & 6.2 & 6.6 & 9.3 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+In the middle of the image, $\sigma$ is about 5 pixels. Towards the top it grows to about 15 pixels, towards the
+bottom to 5 to 14 pixels, as expected from the coverage of the calibration board.
+
+With $\delta$ the distance of a pixel from the corrected line and $h$ the height of the band, both in RGB pixels,
+the weight across the line is
+\begin{equation}
+    w_\perp = \exp\!\left( -\frac{\max\left(|\delta| - h/2,\, 0\right)^2}{2\sigma(v)^2} \right).
+\end{equation}
+
+\subsection{Zone Along the Line}
+\label{sec:zone-along-line}
+
+
+
+
+
+
+\section{Constructing a Probability Zone Around the Epipolar Line}
+\label{sec:probability-zones-old}
 
 The calibration and rectification pipeline described above resolves the
 correspondence problem between the two views down to a single degree of

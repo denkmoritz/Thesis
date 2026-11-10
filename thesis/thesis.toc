@@ -42,15 +42,23 @@
 \contentsline {subsection}{\numberline {3.3.5}Outlier Rejection via Symmetric Epipolar Error}{29}{subsection.3.3.5}%
 \contentsline {subsection}{\numberline {3.3.6}Stereo Rectification}{29}{subsection.3.3.6}%
 \contentsline {subsection}{\numberline {3.3.7}Metric Scale Recovery}{30}{subsection.3.3.7}%
-\contentsline {section}{\numberline {3.4}Constructing a Probability Zone Around the Epipolar Line}{30}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Across-Line Uncertainty}{31}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Along-Line Uncertainty}{31}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Interfacing the Zone with YOLO}{32}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Known Limitations}{32}{subsection.3.4.4}%
-\contentsline {chapter}{\numberline {4}Results}{35}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion}{37}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{39}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Some Appendix Chapter}{41}{appendix.A}%
-\contentsline {chapter}{\nonumberline List of Figures}{43}{chapter*.23}%
-\contentsline {chapter}{\nonumberline List of Tables}{45}{chapter*.24}%
+\contentsline {section}{\numberline {3.4}DVS Detector}{30}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Training Frames}{30}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Detectors and Settings}{31}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}From a DVS Detection to a Zone in the RGB Image}{31}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Which DVS Frames Belong to an RGB Frame}{32}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Matching the Rows in Each Scene}{32}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Zone Across the Line}{33}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Zone Along the Line}{34}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Constructing a Probability Zone Around the Epipolar Line}{34}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Across-Line Uncertainty}{35}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Along-Line Uncertainty}{35}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Interfacing the Zone with YOLO}{36}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Known Limitations}{37}{subsection.3.6.4}%
+\contentsline {chapter}{\numberline {4}Results}{39}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion}{41}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{43}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Some Appendix Chapter}{45}{appendix.A}%
+\contentsline {chapter}{\nonumberline List of Figures}{47}{chapter*.27}%
+\contentsline {chapter}{\nonumberline List of Tables}{49}{chapter*.28}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

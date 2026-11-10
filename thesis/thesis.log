@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.6)  10 NOV 2026 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.6)  10 NOV 2026 23:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1584,106 +1584,105 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 (Font)              scaled to size 20.74pt on input line 40.
 Package tocbasic Info: character protrusion at toc deactivated on input line 40.
- (./thesis.toc
-LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF on input line 4.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd
-File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/LinuxLibertineT-TLF.
-)
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 4.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.1pt on input line 4.
-LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 10.95pt on input line 4.
-LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 6.1pt on input line 4.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.95pt on input line 4.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.1pt on input line 4.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 4.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 4.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 4.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
-File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
-)
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.95pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.1pt on input line 4.
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 4.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxsym.fd
-File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
-)
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.95pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.1pt on input line 4.
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 4.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxsyc.fd
-File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
-)
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.95pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.1pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.95pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.1pt on input line 4.
 
-
-[7
-
-])
+No file thesis.toc.
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
 
 
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/sc' will be
+LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF on input line 41.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd
+File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/LinuxLibertineT-TLF.
+)
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 41.
-[8{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_omcwp2.enc}] (./chapter/intro.tex
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.1pt on input line 41.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 10.95pt on input line 41.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
+(Font)              scaled to size 6.1pt on input line 41.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.95pt on input line 41.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.1pt on input line 41.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 41.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 41.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.95pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.1pt on input line 41.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 41.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.95pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.1pt on input line 41.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 41.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.95pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.1pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.95pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.1pt on input line 41.
+ [7
+
+]
+
+[8
+
+
+] (./chapter/intro.tex
 chapter 1.
 )
 
 [1
-
-
 
 ]
 
@@ -1697,14 +1696,22 @@ chapter 2.
 [3
 
 ]
-<figures/gershick_R-CNN.png, id=197, 1043.9pt x 401.5pt>
+<figures/gershick_R-CNN.png, id=105, 1043.9pt x 401.5pt>
 File: figures/gershick_R-CNN.png Graphic file (type png)
 <use figures/gershick_R-CNN.png>
 Package pdftex.def Info: figures/gershick_R-CNN.png  used on input line 22.
 (pdftex.def)             Requested size: 433.35378pt x 166.67453pt.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/sb/n' will be
+(Font)              scaled to size 10.95pt on input line 27.
 
 
-[4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc} <./figures/gershick_R-CNN.png>]
+LaTeX Warning: Reference `fig:rcnn' on page 4 undefined on input line 27.
+
+
+
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 28.
+[4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_omcwp2.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_z254vq.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc} <./figures/gershick_R-CNN.png>]
 
 [5]
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
@@ -1719,11 +1726,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 10.95pt on input line 52.
 
 
-[6{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_z254vq.enc}]
+[6{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}]
 
 [7]
 
@@ -1748,6 +1753,9 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 [13]
 
 [14]
+
+LaTeX Warning: Reference `tab:yolo-progression' on page 15 undefined on input line 173.
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 212.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
@@ -1780,6 +1788,12 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
 
 ] (./chapter/methods.tex
 chapter 3.
+
+LaTeX Warning: Reference `sec:stereo-calibration' on page 23 undefined on input line 12.
+
+
+LaTeX Warning: Reference `tab:data-scenes' on page 23 undefined on input line 21.
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 30.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
@@ -1837,10 +1851,16 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 5.5pt on input line 31.
 
+LaTeX Warning: Reference `tab:data-scenes' on page 23 undefined on input line 51.
+
+
 
 [23
 
 ]
+
+LaTeX Warning: Reference `tab:data-scenes' on page 24 undefined on input line 69.
+
 
 LaTeX Warning: Reference `sec:zone-timing' on page 24 undefined on input line 76.
 
@@ -1888,6 +1908,9 @@ LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 
 [24]
 
+LaTeX Warning: Reference `tab:data-rgb-labels' on page 25 undefined on input line 130.
+
+
 LaTeX Warning: Reference `sec:motion-cue' on page 25 undefined on input line 140.
 
 
@@ -1897,11 +1920,21 @@ LaTeX Warning: Reference `sec:evaluation' on page 25 undefined on input line 141
 
 [25]
 
+LaTeX Warning: Reference `tab:data-dense' on page 26 undefined on input line 148.
+
+
+LaTeX Warning: Reference `sec:scale-recovery' on page 26 undefined on input line 202.
+
+
+
 [26]
-<figures/verify_02_frame280.png, id=621, 3212.0pt x 1204.5pt>
+
+LaTeX Warning: Reference `fig:stereo-calib-board' on page 27 undefined on input line 215.
+
+<figures/verify_02_frame280.png, id=546, 3212.0pt x 1204.5pt>
 File: figures/verify_02_frame280.png Graphic file (type png)
 <use figures/verify_02_frame280.png>
-Package pdftex.def Info: figures/verify_02_frame280.png  used on input line 223.
+Package pdftex.def Info: figures/verify_02_frame280.png  used on input line 220.
 (pdftex.def)             Requested size: 433.35625pt x 162.50859pt.
 
 
@@ -1909,47 +1942,307 @@ Package pdftex.def Info: figures/verify_02_frame280.png  used on input line 223.
 
 [28]
 
+LaTeX Warning: Reference `sec:epipolar-geometry' on page 29 undefined on input line 304.
+
+
+LaTeX Warning: Reference `sec:epipolar-geometry' on page 29 undefined on input line 310.
+
+
+
 [29]
 
-LaTeX Warning: Reference `sec:essential-fundamental-matrices' on page 30 undefined on input line 358.
+LaTeX Warning: Reference `sec:stereo-calibration' on page 30 undefined on input line 349.
+
+
+LaTeX Warning: Reference `sec:essential-fundamental-matrices' on page 30 undefined on input line 355.
+
+
+LaTeX Warning: Reference ` sec:data-recordings' on page 30 undefined on input line 368.
+
+
+LaTeX Warning: Reference `sec:data-dvs-annotation' on page 30 undefined on input line 372.
 
 
 
 [30]
 
-[31])
+LaTeX Warning: Reference `sec:training-design' on page 31 undefined on input line 397.
+
+./chapter/methods.tex:403: Undefined control sequence.
+l.403 ...etectors are compared: YOLOv7 \parentcite
+                                                  {wang_yolov7}, which \text...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter/methods.tex:403: Missing $ inserted.
+<inserted text> 
+                $
+l.403 ...rs are compared: YOLOv7 \parentcite{wang_
+                                                  yolov7}, which \textcite{g...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapter/methods.tex:403: Extra }, or forgotten $.
+l.403 ...compared: YOLOv7 \parentcite{wang_yolov7}
+                                                  , which \textcite{gebauer_...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\abx@dot ...stkern >\z@ \unkern \fi .\spacefactor 
+                                                  \blx@sf@dot 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:403: Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+./chapter/methods.tex:403: You can't use `\spacefactor' in math mode.
+\reserved@b ->\spacefactor 
+                           \@m 
+l.403 ...}, which \textcite{gebauer_towards_2024} 
+                                                  used as
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./chapter/methods.tex:404: Undefined control sequence.
+l.404 ...d the large version of YOLOv8 \parentcite
+                                                  {jocher_yolov8_2023} and Y...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter/methods.tex:405: You can't use `\spacefactor' in math mode.
+\blx@leavevmode ...\else \leavevmode \spacefactor 
+                                                  \blx@sf@par \fi 
+l.405 \parencite{jocher_yolo11_2024}.
+                                      All three use the same settings (Table...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Citation 'jocher_yolo11_2024' on page 31 undefined on input line 405.
+
+./chapter/methods.tex:405: You can't use `\spacefactor' in math mode.
+\reserved@b ->\spacefactor 
+                           \@m 
+l.405 \parencite{jocher_yolo11_2024}.
+                                      All three use the same settings (Table...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Reference `tab:dvs-settings' on page 31 undefined on input line 405.
+
+./chapter/methods.tex:407: Missing $ inserted.
+<inserted text> 
+                $
+l.407 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no ê in font ntxexx!
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no è in font ntxexx!
+Missing character: There is no ò in font ntxexx!
+Missing character: There is no è in font ntxexx!
+
+Overfull \hbox (401.24908pt too wide) in paragraph at lines 403--407
+\OML/nxlmi/m/it/10.95 learningbaselineandthelargeversionofYOLOv\OT1/LinuxLibertineT-TLF/m/n/10.95 (-20) 8[]\OML/nxlmi/m/it/10.95 andYOLOv\OT1/LinuxLibertineT-TLF/m/n/10.95 (-20) 11\LMS/ntxsy/m/n/10.95 »[]¼\OML/nxlmi/m/it/10.95 :Allthreeusethesamesettings\LMS/ntxsy/m/n/10.95 ¹\OML/nxlmi/m/it/10.95 Table []\LMS/ntxsy/m/n/10.95 º\OML/nxlmi/m/it/10.95 :Eachofthesixfoldsistrainedwiththreeseeds:$ 
+ []
+
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 418.
+
+LaTeX Warning: Reference `sec:zone-sources' on page 31 undefined on input line 431.
+
+
+LaTeX Warning: Reference `sec:stereo-rectification' on page 31 undefined on input line 437.
+
+
+
+[31]
+
+LaTeX Warning: Reference `sec:data-timing' on page 32 undefined on input line 452.
+
+
+LaTeX Warning: Reference `sec:stereo-calibration' on page 32 undefined on input line 461.
+
+
+LaTeX Warning: Reference `tab:row-correction' on page 32 undefined on input line 463.
+
+
+LaTeX Warning: Reference `eq:row-correction' on page 32 undefined on input line 482.
+
+
 
 [32]
 
+LaTeX Warning: Reference `sec:zone-along-line' on page 33 undefined on input line 491.
+
+
+LaTeX Warning: Reference `sec:zone-along-line' on page 33 undefined on input line 491.
+
+
+LaTeX Warning: Reference `tab:row-correction' on page 33 undefined on input line 508.
+
+
+LaTeX Warning: Reference `sec:zone-sources' on page 33 undefined on input line 515.
+
+
+LaTeX Warning: Reference `tab:zone-sigma' on page 33 undefined on input line 534.
+
+
+
 [33]
 
-[34
+LaTeX Warning: Reference `sec:outlier-rejection' on page 34 undefined on input line 589.
 
 
-] (./chapter/results.tex
-chapter 4.
-)
 
-[35
+[34]
 
-]
-
-[36
+LaTeX Warning: Reference `sec:outlier-rejection' on page 35 undefined on input line 615.
 
 
-] (./chapter/discussion.tex
-chapter 5.
-)
+LaTeX Warning: Reference `sec:scale-recovery' on page 35 undefined on input line 629.
 
-[37
 
-]
+
+[35]
+
+[36])
+
+[37]
 
 [38
 
 
-] (./chapter/conclusion.tex
-chapter 6.
+] (./chapter/results.tex
+chapter 4.
 )
 
 [39
@@ -1959,8 +2252,8 @@ chapter 6.
 [40
 
 
-] (./chapter/appendix_chapter.tex
-chapter A.
+] (./chapter/discussion.tex
+chapter 5.
 )
 
 [41
@@ -1970,13 +2263,9 @@ chapter A.
 [42
 
 
-]
-Package tocbasic Info: character protrusion at lof deactivated on input line 72.
- (./thesis.lof)
-\tf@lof=\write6
-\openout6 = `thesis.lof'.
-
-
+] (./chapter/conclusion.tex
+chapter 6.
+)
 
 [43
 
@@ -1985,13 +2274,9 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 72.
 [44
 
 
-]
-Package tocbasic Info: character protrusion at lot deactivated on input line 75.
- (./thesis.lot)
-\tf@lot=\write7
-\openout7 = `thesis.lot'.
-
-
+] (./chapter/appendix_chapter.tex
+chapter A.
+)
 
 [45
 
@@ -2001,25 +2286,57 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 75.
 
 
 ]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 78.
+Package tocbasic Info: character protrusion at lof deactivated on input line 72.
+
+No file thesis.lof.
+\tf@lof=\write6
+\openout6 = `thesis.lof'.
+
 
 
 [47
 
 ]
 
-[48]
+[48
 
-[49]
 
-[50]
+]
+Package tocbasic Info: character protrusion at lot deactivated on input line 75.
 
-[51]
+No file thesis.lot.
+\tf@lot=\write7
+\openout7 = `thesis.lot'.
 
-[52] (./chapter/signature.tex)
 
-[53
+
+[49
+
+]
+
+[50
+
+
+]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 78.
+
+
+[51
+
+]
+
+[52]
+
+[53]
+
+[54]
+
+[55]
+
+[56] (./chapter/signature.tex)
+
+[57
 
 
 
@@ -2032,23 +2349,35 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                thesis
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 403 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 48154 strings out of 473190
- 942146 string characters out of 5715801
- 1931858 words of memory out of 5000000
- 69792 multiletter control sequences out of 15000+600000
- 789283 words of font info for 557 fonts, out of 8000000 for 9000
+ 48162 strings out of 473190
+ 941811 string characters out of 5715801
+ 1923855 words of memory out of 5000000
+ 69755 multiletter control sequences out of 15000+600000
+ 804966 words of font info for 581 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,21n,110p,10980b,4139s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/LibertineMathMI7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineTZ.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on thesis.pdf (61 pages, 5123423 bytes).
+ 113i,21n,110p,10980b,3691s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/LibertineMathMI7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/LibertineMathRM.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineTZ.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on thesis.pdf (65 pages, 5133533 bytes).
 PDF statistics:
- 1270 PDF objects out of 1440 (max. 8388607)
- 1154 compressed objects within 12 object streams
- 217 named destinations out of 1000 (max. 500000)
- 130457 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 1182 PDF objects out of 1200 (max. 8388607)
+ 1061 compressed objects within 11 object streams
+ 235 named destinations out of 1000 (max. 500000)
+ 137177 words of extra memory for PDF output out of 154059 (max. 10000000)
 

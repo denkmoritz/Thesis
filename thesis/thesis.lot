@@ -6,6 +6,10 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces The six scenes. Frames: length of the videos (RGB and DVS have the same number of frames). Exposure: length of the trigger pulse, which equals the RGB exposure time. DVS boxes: rows of the DVS annotation, all and certain ones, and the certain boxes placed by hand.}}{23}{table.caption.17}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces RGB labels per scene: labelled frames, boxes, and the median box width and height in RGB pixels.}}{25}{table.caption.20}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces Clips with dense RGB labels. Frames: RGB frame numbers of the clip (scene 3 at about 50 frames per second, so 250 frames are also 5\,s).}}{26}{table.caption.21}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Training frames of the DVS detector per scene.}}{31}{table.caption.23}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Training settings of the DVS detectors.}}{31}{table.caption.24}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Row correction per scene. Matches: label-free matches (of 150 frames) that agree with the most frequent offset; negative: share of these matches with a negative disparity (sign check, Section~\ref {sec:zone-along-line}). The other columns give the median remaining row offset of the RGB labels in RGB pixels, measured on the last 40\,\% of the labelled frames of each scene.}}{33}{table.caption.25}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Width $\sigma $ of the fall-off (RGB pixels) per band of image rows, for each left-out scene, estimated on the other five scenes. Rows are given as the centre of the band in rectified pixels; small values = top of the image. --: fewer than 15 labels in the band.}}{34}{table.caption.26}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

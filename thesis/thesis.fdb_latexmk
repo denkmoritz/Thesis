@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber thesis"] 1794315420.17231 "thesis.bcf" "thesis.bbl" "thesis" 1794315431.73101 0
+["biber thesis"] 0 "thesis.bcf" "thesis.bbl" "thesis" 0 -1
   "literature.bib" 1789469177.46502 62795 1aeeecd11dae7a73c64cf0b38e023db1 ""
-  "thesis.bcf" 1794315431.52948 127866 f17f5588785ddf4313da1e28f36c64e8 "pdflatex"
+  "thesis.bcf" 1794348349.58784 128330 221a962b7070cafa0ca37010199e8d44 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1794315427.0828 "/Users/moritzdenk/Geoinformatics/Uni/master/Thesis/thesis/thesis.tex" "thesis.pdf" "thesis" 1794315431.73131 0
+["pdflatex"] 1794348344.70553 "/Users/moritzdenk/Geoinformatics/Uni/master/Thesis/thesis/thesis.tex" "thesis.pdf" "thesis" 1794348349.87167 2
   "/Users/moritzdenk/Geoinformatics/Uni/master/Thesis/thesis/thesis.tex" 1787249051.83454 2041 620013377390c8a2930d353a0844f0e1 ""
   "/Users/moritzdenk/Library/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1785169415 5468857 a567431c4a957713c992b291497411a5 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-1.enc" 1558214095 7705 f192b69a9e38c100bb18eada2c861735 ""
@@ -78,6 +78,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineTZ.pfb" 1354061736 526513 df8837485c436abdc438032d23b309fa ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb" 1569879884 35829 268d1d114c9114e541f92817aec4230d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/LibertineMathMI7.pfb" 1575323900 36894 0893e50696ed2a200373455c6aff080e ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/LibertineMathRM.pfb" 1569879884 17941 ddba6afdead1586dc42d18763749eddd ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb" 1724614892 32409 aee30089ce2d804d7327a2f8ccff0462 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/txexs.pfb" 1621283831 33424 f912ebe54685d0a65d3c046e3d517e38 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb" 1736550153 65081 1217ccf27de85b7db49806ee29c16745 ""
@@ -342,7 +343,7 @@
   "chapter/discussion.tex" 1787249051.77344 69 cb76957b5bd1a40f27eb4f43c2e4d2a4 ""
   "chapter/fundamentals.tex" 1789725295.30565 57135 6ae474094c4e4731730740474a41fd48 ""
   "chapter/intro.tex" 1787249332.77819 66 9e1540d21b285ecb6d577b926acde881 ""
-  "chapter/methods.tex" 1794315414.91586 28448 dcb24356ecf96070beb879ac9cc25b45 ""
+  "chapter/methods.tex" 1794348339.11018 40012 1514e171dccf25108a8fe00cdfb6cb68 ""
   "chapter/results.tex" 1787249079.74375 63 6cd8a1c8056dcb27f45dac4514d74a49 ""
   "chapter/signature.tex" 1707145461 474 8a2717862676eadd80633be4c10b0bc8 ""
   "chapter/title_page.tex" 1707145461 1014 c2e724202b1f5bdaa2cac5de41dbb9bd ""
@@ -352,13 +353,12 @@
   "logos/cvmls.pdf" 1707145461 11456 495de8f63fcf7a40e7b4069f12428b1c ""
   "logos/unims.pdf" 1707145461 4015 7a73d4c3996b73638c7a7644fa8bb1b0 ""
   "preamble.tex" 1789047487.60652 6644 7ad74f58b35042328725309d9f8559cf ""
-  "thesis.aux" 1794315431.49698 60546 bc21289a18e32c7209fb5f754585cfe1 "pdflatex"
+  "thesis.aux" 1794348349.55885 66250 c3000a64d7d3e09460f273ef38934616 "pdflatex"
   "thesis.bbl" 1794315422.33244 122036 16bc9365d14e1b93e965c4c0fa9aeb0a "biber thesis"
-  "thesis.lof" 1794315431.53033 673 7be64fdba78ab77aadde37805e9cdc25 "pdflatex"
-  "thesis.lot" 1794315431.53056 1111 49570c861a168b96fcfb2ac1560a4442 "pdflatex"
-  "thesis.run.xml" 1794315431.53022 2450 c220b4cc60f5225a6c58ffacf6d19c9a "pdflatex"
+  "thesis.lof" 1794348349.58932 673 7be64fdba78ab77aadde37805e9cdc25 "pdflatex"
+  "thesis.lot" 1794348349.58935 2152 da3f7524add8b9bb3f82b8f9586dd722 "pdflatex"
   "thesis.tex" 1787249051.83454 2041 620013377390c8a2930d353a0844f0e1 ""
-  "thesis.toc" 1794315431.53028 5034 24d1f2cfeb2080de7aea7d2cab6e15d1 "pdflatex"
+  "thesis.toc" 1794348349.58925 5787 df9fd899c4a140091887214294cd910e "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.bcf"
