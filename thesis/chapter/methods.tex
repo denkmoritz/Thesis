@@ -2,6 +2,181 @@
 \chapter{Methods}
 \label{ch:methods}
 
+\section{Data}
+\label{sec:data}
+
+\subsection{sec:data-recordings}
+
+All recordings are from the dataset of \textcite{gebauer_towards_2024}. They recorded
+insects in the Botanical Garden of the University of Münster with a DVS and an RGB camera
+mounted side by side on one base plate (Section~\ref{sec:stereo-calibration}). The RGB camera
+records $1920 \times 1200$ pixels at 100 frames per second, the DVS has $1280 \times 720$
+pixels. Of their 31 recordings, \textcite{gebauer_towards_2024} annotated six, and 
+these six scenes are used in this thesis.
+
+\textcite{gebauer_towards_2024} named each scene by three ratings, each low (l), medium (m)
+or high (h): the distance to the area of interest, the motion of this area (mainly plants
+in the wind), and the motion of the background. Scene \texttt{3\_m-h-h}, for example, has a
+medium distance, a strongly moving area of interest and a strongly moving background. In 
+this thesis the scenes are called by their number, 1 to 6, in order of Table~\ref{tab:data-scenes}.
+
+\begin{table}[ht]
+    \centering
+    \caption{The six scenes. Frames: length of the videos (RGB and DVS have the
+    same number of frames). Exposure: length of the trigger pulse, which equals the
+    RGB exposure time. DVS boxes: rows of the DVS annotation, all and certain ones,
+    and the certain boxes placed by hand.}
+    \label{tab:data-scenes}
+    \small
+    \begin{tabular}{llcccccc}
+        \hline
+        Scene & Name & Frames & Duration & Exposure & DVS boxes & certain & hand-placed \\
+        \hline
+        1 & l-l-l & 15,546 & 155\,s & 1\,ms & 9,192 & 7,850 & 1,632 \\
+        2 & l-h-l & 34,863 & 349\,s & 1\,ms & 2,898 & 1,617 & 552 \\
+        3 & m-h-h & 8,201 & 162\,s & 0.08\,ms & 15,052 & 12,480 & 3,190 \\
+        4 & m-m-h & 6,000 & 60\,s & 1\,ms & 4,992 & 3,920 & 1,369 \\
+        5 & h-l-h & 6,000 & 60\,s & 1\,ms & 403 & 378 & 366 \\
+        6 & h-h-h & 10,495 & 105\,s & 7.8\,ms & 9,214 & 8,104 & 1,476 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For each scene, the published dataset has four files: the RGB video, the DVS
+video, the DVS annotation and the raw events. The DVS video is made of DVS
+frames. Each DVS frame covers the time between two RGB frames and shows every
+event from that time. A pixel with an ON event is white, a pixel with an OFF
+event is black, and a pixel without an event is grey.
+
+Table~\ref{tab:data-scenes} shows how different the scenes are. Scene 2 is the longest of
+the recording but has the fewest insects. Scene 5 is filmed from far away. Its insects are
+only a few pixels large and rare. Scene 3 has the most annotated boxes, because several
+insects are visible at the same time.
+
+\paragraph{Frame rate of scene 3.} \textbf{explain more precisely} All six videos state 100 
+frames per second. For scene 3 this is not correct. The trigger signals in the raw event
+recording are 19.7\,ms apart, so the scene was recorded at about 50 fps (8,201 frames 
+in 162.5\,s). This matters wherever time is counted in frames: an insect moves about twice
+as far between two frames of scene 3, and a window of ten frames covers 200 instead 
+of 100\,ms.
+
+\subsection{Synchronisation and Timing}
+\label{sec:data-timing}
+
+\textcite{gebauer_towards_2024} connected the exposure signal of the RGB camera to the 
+trigger input of the DVS. Every RGB exposure therefore leaves two trigger events stream: 
+one when the exposure starts and one one when it ends. The length of these pulses gives the
+exposure time of every scene (Table~\ref{tab:data-scenes}). It is 1\,ms in most scenes,
+but only 0.08\,ms in scene 3 and 7.8\,ms in scene 6, where moving insects are blurred.
+
+Which events belong to which DVS frame was checked on the raw event recordings,
+without any labels. Rebuilding the DVS frames from the events showed that DVS frame
+$f$ holds the events between trigger $f-1$ and trigger $f$, in all six scenes. The
+exposure of RGB frame $f$ therefore lies at the border between DVS frames $f-1$
+and $f$. This is used for the zones in Section~\ref{sec:zone-timing}.
+
+\subsection{DVS Annotation}
+\label{sec:data-dvs-annotation}
+
+\textcite{gebauer_towards_2024} drew the boxes in the DVS frames and used the RGB video
+mainly to verify them. Every box carries a confidence flag: \emph{certain} if the 
+annotator was sure that it is an insect, \emph{uncertain} if it could also be an artefact.
+Some boxes were placed by hand on keyframes, the others were filled in by the annotation 
+tool between them. Hand-placed boxes are more reliable, so they are used where the exact 
+position matters, for example to pick the frames for the RGB labels. 
+\textcite{gebauer_towards_2024} also gave every box an insect ID, but the IDs are not part of the published annotation. The DVS annotation therefore says where insects are, but not which box belongs to which insect. 
+
+\subsection{RGB Labels}
+\label{sec:data-rgb-labels}
+
+The dataset has no labels in the RGB images. To score detections in the RGB video, RGB 
+labels were drawn for this thesis in CVAT\footnote{\url{https://www.cvat.ai/}}. The frames
+to label were taken from frames with a \emph{certain}, hand-placed DVS box, so that most of 
+them show an insect. Every insect visible in the RGB frame got a box. A video with the 
+epipolar line of each DVS box drawn into the RGB frame helped to find small insects. 
+However, the boxes were drawn on the original RGB frames, and only where the insect itselft could be seen.
+
+Three choices shape what these labels can measure:
+\begin{itemize}
+    \item Frames in which no insect could be seen the RGB image were deleted. A missing 
+    frame therefore does not mean that the frame is empty, and every labelled frame 
+    contains at least one insect.
+    \item In busy frames, not every insect could be labelled with certainty, so some frames 
+    may miss an insect.
+    \item The labels were drawn with the DVS box in mind. They show the insects the DVS
+    sees and that are also visible for the human eye in the RGB image, not every insect in 
+    the RGB video. 
+\end{itemize}
+
+\begin{table}[ht]
+    \centering
+    \caption{RGB labels per scene: labelled frames, boxes, and the median box
+    width and height in RGB pixels.}
+    \label{tab:data-rgb-labels}
+    \small
+    \begin{tabular}{lccccccc}
+        \hline
+         & Scene 1 & Scene 2 & Scene 3 & Scene 4 & Scene 5 & Scene 6 & Total \\
+        \hline
+        Labelled frames & 305 & 277 & 246 & 199 & 65 & 73 & 1,165 \\
+        Boxes & 358 & 277 & 416 & 233 & 65 & 91 & 1,440 \\
+        Median width (px) & 38.6 & 28.5 & 17.4 & 15.4 & 7.9 & 10.8 & \\
+        Median height (px) & 33.8 & 27.8 & 16.6 & 14.9 & 6.2 & 11.7 & \\
+        \hline
+    \end{tabular}
+\end{table}
+\section{Stereo Calibration of the Event Camera and RGB Camera Rig}
+
+Table~\ref{tab:data-rgb-labels} shows that the insects get smaller from scene 1 to scene 5, 
+following the distance in the scene names. In scene 5, the median insect is only $8 \times 
+6$ pixels large.
+
+\subsection{Privacy Masks in Scene 6}
+\label{sec:data-privacy}
+
+In scene 6, parts of the image are covered by privacy masks. In the published data, these 
+areas are black rectangles in the RGB video, and their events are removed from the event
+recording. The masks appear and disappear over time. Masked areas are left out wherever 
+they could cause errors: no motion is computed there (Section~\ref{sec:motion-cue}), and 
+detections there are not scored (Section~\ref{sec:evaluation}). No RGB label lies inside a mask.
+
+\subsection{Dense Labels for Tracking}
+\label{sec:data-dense-labels}
+
+The RGB labels above are spread over the recording and cover short moments. To score 
+tracking, which follows an insect from frame to frame, four clips of 5\,s were labelled in 
+every frame, with one ID per insect (Table~\ref{tab:data-dense}). Each clip was chosen 
+where the earlier RGB labels show several insects within 5\,s. The insects were drawn as 
+tracks in CVAT: boxes were set on keyframes and filled in between them by linear 
+interpolation, with a new keyframe wherever the filled-in box left the insect. Frames in 
+which the position of the insect could be ne told were marked uncertain. An insect that left
+the image and came back kept its ID. When two insect came too close to be told apart, their
+tracks ended there, and an insect that appeared afterwards got a new ID.
+
+\begin{table}[ht]
+    \centering
+    \caption{Clips with dense RGB labels. Frames: RGB frame numbers of the clip
+    (scene 3 at about 50 frames per second, so 250 frames are also 5\,s).}
+    \label{tab:data-dense}
+    \small
+    \begin{tabular}{lcccc}
+        \hline
+        Scene & Frames & Insects (tracks) & Boxes & of which uncertain \\
+        \hline
+        6 & 1700--2199 & 5 & 302 & 0 \\
+        3 & 920--1169 & 4 & 958 & 0 \\
+        4 & 1432--1931 & 4 & 836 & 0 \\
+        1 & 7080--7579 & 6 & 680 & 22 \\
+        \hline
+        Total & & 19 & 2,776 & 22 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+In scene 6, six of the eleven insects that the DVS annotation shows in the clip cannot be 
+seen in the RGB video, so they have no RGB track. Scenes 2 and 5 have no clip, because they
+rarely show more than one insect visible in RGB at a time.
+
 \section{Stereo Calibration of the Event Camera and RGB Camera Rig}
 \label{sec:stereo-calibration}
 

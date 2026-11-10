@@ -1,0 +1,11 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Object detection system overview \blx@tocontentsinit {0}\textcite {girshick_2014_rcnn}}}{4}{figure.caption.3}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Detected asymmetric circle grid in a synchronized DVS (left) and RGB (right) frame pair (frame 280), color-coded per row by \texttt {cv2.findCirclesGrid}; the origin point is circled in red.}}{27}{figure.caption.22}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

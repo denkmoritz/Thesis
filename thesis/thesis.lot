@@ -1,0 +1,13 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Architectural progression of the YOLO family from v1 to v12.}}{16}{table.caption.16}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces The six scenes. Frames: length of the videos (RGB and DVS have the same number of frames). Exposure: length of the trigger pulse, which equals the RGB exposure time. DVS boxes: rows of the DVS annotation, all and certain ones, and the certain boxes placed by hand.}}{23}{table.caption.17}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces RGB labels per scene: labelled frames, boxes, and the median box width and height in RGB pixels.}}{25}{table.caption.20}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Clips with dense RGB labels. Frames: RGB frame numbers of the clip (scene 3 at about 50 frames per second, so 250 frames are also 5\,s).}}{26}{table.caption.21}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
